@@ -1,4 +1,4 @@
-# Wireless Attacks Step-By-Step Guid
+# Wireless Attacks Step-By-Step Guide
 
                         #Created by Rakesh Pujari <rakesh.pujari11@gmail.com>#
 
