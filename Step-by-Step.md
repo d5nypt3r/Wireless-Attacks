@@ -1,6 +1,6 @@
 # Wireless Attacks Step-By-Step Guid
 
-                        *Created by Rakesh Pujari <rakesh.pujari11@gmail.com>*
+                        #Created by Rakesh Pujari <rakesh.pujari11@gmail.com>#
 
 ================================================================================                        
 ## Pre-requisite:
@@ -261,4 +261,4 @@
 
 
 
-                    #Uploaded by Dhawal K. Naik <naik.dhawal89@gmail.com>#
+                        #Uploaded by Dhawal K. Naik <naik.dhawal89@gmail.com>#
