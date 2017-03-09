@@ -163,7 +163,7 @@
             # ifup wlan1`
 
         f.	Install and configure the DHCP server for the access point.
-            # apt-get install isc-dhcp-server`
+            # apt-get install isc-dhcp-server
           -	Edit the following files:
             # /etc/default/isc-dhcp-server
           - set the value of the interfaces parameter to wlan1.
