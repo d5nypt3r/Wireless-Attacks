@@ -21,7 +21,8 @@
 ================================================================================
 
 
-1. Cracking WEP
+1. Cracking WEP:
+```
    a.	Connect the Alfa card to the kali linux vm. Check the interface name using the below command:
         `iwconfig`
    b.	Set the wireless interface to Monitor mode with the following commands:
@@ -51,7 +52,7 @@
    l.	When 50000 data packets are captured, run the following command to crack the WEP Password.
       `aircrack-ng <capture file name>`
    m.	If the password is not cracked, collect more data packets and run the aircrack-ng command again to crack the password.
-
+```
   - There are other methods as well for cracking WEP ex. Korek Chop Chop attack, Fragmentation attack etc.
 
 
