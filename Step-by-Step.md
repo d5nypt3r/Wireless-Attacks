@@ -11,7 +11,7 @@
 
 ================================================================================
 
-#Index.
+#### Index.
 ```
 1. Cracking WEP
 2. Cracking WPA2 Personal.
@@ -22,7 +22,7 @@
 ================================================================================
 
 
-1. Cracking WEP:
+##### 1. Cracking WEP:
 ```
    a.	Connect the Alfa card to the kali linux vm. Check the interface name using the below command:
        #iwconfig
@@ -57,7 +57,7 @@
   - There are other methods as well for cracking WEP ex. Korek Chop Chop attack, Fragmentation attack etc.
 
 
-2. Cracking WPA2 Personal.
+##### 2. Cracking WPA2 Personal.
 ```
    a.	Follow the steps a-g, as shown in the WEP Cracking.
    b.	Deauthenticate the connected user to capture the WPA 4 way handshake, in which WPA keystream is present.
@@ -69,9 +69,9 @@
       # aircrack-ng <captured file> -w <Dictionary file>`
 ```
 
-3. Cracking WPA2 Enterprise.
+##### 3. Cracking WPA2 Enterprise.
 
-- Setting up Radius Server:
+**- Setting up Radius Server:**
 ```
     a.	Download the freeradius server package and WPE support patch for freeradius server from the following links.
       # wget ftp://ftp.freeradius.org/pub/radius/old/freeradius-server-2.1.12.tar.bz2`
@@ -105,7 +105,7 @@
     i.	You can also follow this link to setup freeradius:
         •	http://resources.infosecinstitute.com/attacking-wpa2-enterprise/
 ```
-- Setting up Evil Twin Rouge Access Point:
+**- Setting up Evil Twin Rouge Access Point:**
 ```
     a.	Connect your wireless router using lan and open the admin page to configure the AP. Ensure Wireless Lan IP is assigned to the kali lan interface.
     b.	Set the SSID of the AP as the one which you want to attack.
@@ -114,7 +114,7 @@
     e.	In Radius server configuration, provide the IP and port of the radius server. Provide the password to connect the AP with the radius server.
     f.	Save the settings. Evil Twin Rogue AP is ready to be used.
 ```
-- Attack:
+**- Attack:**
 ```
     a.	Follow the step a-g, as shown in the WEP cracking.
     b.	Keep your wireless router in such a place where the clients have good range to it.
@@ -124,15 +124,15 @@
           # asleap –C <Challeng> -R< Response> -W <Wordlist>
 ```
 
-4. Phishing Attack.
-- Pre-requisite:
+##### 4. Phishing Attack.
+**- Pre-requisite:**
 ```
     Wireless router which supports Captive portal integration
     or
     A wireless adapter like Alfa Adapter.
     A Phishing page.
 ```
-  - Setup:
+  **- Setup:**
 ```  
     This setup requires 2 wireless adapters. 1 for performing packet injection and other for setting up a fake access point.
         a.	Connect both the wireless adapters to the Kali. Check the interface name for both the wireless adapters. Configure wlan0 in monitor mode for packet injection and wlan1 as AP.
@@ -237,7 +237,7 @@
         r.	Upon entering the username and password in the login page, the password will be saved in a file called username.txt in clear text.
 ```
 
-5. Cracking WPS
+##### 5. Cracking WPS
 ```
         1.	Start airodump-ng and gather information like MAC, channel number about the desired SSID.
         2.	Run the following command to check if WPS is enabled on the given SSID.
