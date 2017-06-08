@@ -11,7 +11,7 @@
 
 ================================================================================
 
-#### Index.
+### Index.
 ```
 1. Cracking WEP
 2. Cracking WPA2 Personal.
@@ -22,7 +22,7 @@
 ================================================================================
 
 
-##### 1. Cracking WEP:
+### 1. Cracking WEP:
 ```
    a.	Connect the Alfa card to the kali linux vm. Check the interface name using the below command:
        #iwconfig
@@ -57,7 +57,7 @@
   - There are other methods as well for cracking WEP ex. Korek Chop Chop attack, Fragmentation attack etc.
 
 
-##### 2. Cracking WPA2 Personal.
+### 2. Cracking WPA2 Personal.
 ```
    a.	Follow the steps a-g, as shown in the WEP Cracking.
    b.	Deauthenticate the connected user to capture the WPA 4 way handshake, in which WPA keystream is present.
@@ -69,7 +69,7 @@
       # aircrack-ng <captured file> -w <Dictionary file>`
 ```
 
-##### 3. Cracking WPA2 Enterprise.
+### 3. Cracking WPA2 Enterprise.
 
 **- Setting up Radius Server:**
 ```
@@ -124,7 +124,7 @@
           # asleap –C <Challeng> -R< Response> -W <Wordlist>
 ```
 
-##### 4. Phishing Attack.
+### 4. Phishing Attack.
 **- Pre-requisite:**
 ```
     Wireless router which supports Captive portal integration
@@ -237,7 +237,7 @@
         r.	Upon entering the username and password in the login page, the password will be saved in a file called username.txt in clear text.
 ```
 
-##### 5. Cracking WPS
+### 5. Cracking WPS
 ```
         1.	Start airodump-ng and gather information like MAC, channel number about the desired SSID.
         2.	Run the following command to check if WPS is enabled on the given SSID.
